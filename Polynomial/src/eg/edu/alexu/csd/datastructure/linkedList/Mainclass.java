@@ -84,7 +84,7 @@ public class Mainclass {
 		HashSet<Character> intialized=new HashSet<Character>();
 		while(flag==true)
 		{
-		System.out.print("Please choose an action : ");
+			System.out.print("Please choose an action :1>>set , 2>>print , 3>>add , 4>>subtract , 5>>multiply , 6>>evaluate , 7>>clear ");
 		int action=scan.nextInt();
 		if(action==1)//set
 		{
