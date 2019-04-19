@@ -1,4 +1,6 @@
 package eg.edu.alexu.csd.datastructure.linkedList;
+// Abdelrahman Ibrahim Ali Hagrass   ID : 38
+// Youssef Raouf Wadie        ID : 78
 import java.util.*;
 import java.awt.Point;
 import java.lang.*;
@@ -84,16 +86,17 @@ public class Mainclass {
 		HashSet<Character> intialized=new HashSet<Character>();
 		while(flag==true)
 		{
-			System.out.print("Please choose an action :1>>set , 2>>print , 3>>add , 4>>subtract , 5>>multiply , 6>>evaluate , 7>>clear ");
+		System.out.print("Please choose an action :1>>set , 2>>print , 3>>add , 4>>subtract , 5>>multiply , 6>>evaluate , 7>>clear , else>>end ");
 		int action=scan.nextInt();
 		if(action==1)//set
 		{
 			System.out.println("Insert the variable name: A, B or C");
 			char poly=scan.next().charAt(0);
-			if(poly<'A'||poly>'Z')
+			while(poly<'A'||poly>'Z')
 			{
 				System.out.println("Invalid variable Name");
-				throw new RuntimeException();
+				System.out.println("Insert the variable name: A, B or C");
+				 poly=scan.next().charAt(0);
 				
 			}
 			intialized.add(poly);
@@ -104,13 +107,17 @@ public class Mainclass {
 		}
 		else if(action==2)//print
 		{
-			System.out.println("Insert the variable name: A, B or C");
+			System.out.println("Insert the variable name: A, B , C or R");
 			char poly=scan.next().charAt(0);
-			if(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
+			while(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
 			{
 				String msg="Varaible "+poly+" Not Set";
 				System.out.println(msg);
-				throw new RuntimeException(msg);
+				System.out.println("Insert the variable name: A, B , C or R");
+				 poly=scan.next().charAt(0);
+
+//				throw new RuntimeException(msg);
+				
 			}
 			System.out.println(f.print(poly));
 		}
@@ -118,19 +125,23 @@ public class Mainclass {
 		{
 			System.out.println("Insert the variable name: A, B or C");
 			char poly=scan.next().charAt(0);
-			if(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
+			while(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
 			{
 				String msg="Varaible "+poly+" Not Set";
 				System.out.println(msg);
-				throw new RuntimeException(msg);
+				System.out.println("Insert the variable name: A, B or C");
+				 poly=scan.next().charAt(0);
+//				throw new RuntimeException(msg);
 			}
 			System.out.println("Insert the variable name: A, B or C");
 			char poly2=scan.next().charAt(0);
-			if(l[poly2-'A'].isEmpty()&&!intialized.contains(poly2))
+			while(l[poly2-'A'].isEmpty()&&!intialized.contains(poly2))
 			{
 				String msg="Varaible "+poly2+" Not Set";
 				System.out.println(msg);
-				throw new RuntimeException(msg);
+				System.out.println("Insert the variable name: A, B or C");
+				 poly2=scan.next().charAt(0);
+//				throw new RuntimeException(msg);
 			}
 			f.add(poly, poly2);
 			System.out.println(f.print('R'));
@@ -139,19 +150,23 @@ public class Mainclass {
 		{
 			System.out.println("Insert the variable name: A, B or C");
 			char poly=scan.next().charAt(0);
-			if(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
+			while(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
 			{
 				String msg="Varaible "+poly+" Not Set";
 				System.out.println(msg);
-				throw new RuntimeException(msg);
+				System.out.println("Insert the variable name: A, B or C");
+				 poly=scan.next().charAt(0);
+//				throw new RuntimeException(msg);
 			}
 			System.out.println("Insert the variable name: A, B or C");
 			char poly2=scan.next().charAt(0);
-			if(l[poly2-'A'].isEmpty()&&!intialized.contains(poly2))
+			while(l[poly2-'A'].isEmpty()&&!intialized.contains(poly2))
 			{
 				String msg="Varaible "+poly2+" Not Set";
 				System.out.println(msg);
-				throw new RuntimeException(msg);
+				System.out.println("Insert the variable name: A, B or C");
+				 poly2=scan.next().charAt(0);
+//				throw new RuntimeException(msg);
 			}
 			f.subtract(poly, poly2);
 			System.out.println(f.print('R'));
@@ -160,19 +175,23 @@ public class Mainclass {
 		{
 			System.out.println("Insert the variable name: A, B or C");
 			char poly=scan.next().charAt(0);
-			if(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
+			while(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
 			{
 				String msg="Varaible "+poly+" Not Set";
 				System.out.println(msg);
-				throw new RuntimeException(msg);
+				System.out.println("Insert the variable name: A, B or C");
+				 poly=scan.next().charAt(0);
+//				throw new RuntimeException(msg);
 			}
 			System.out.println("Insert the variable name: A, B or C");
 			char poly2=scan.next().charAt(0);
-			if(l[poly2-'A'].isEmpty()&&!intialized.contains(poly2))
+			while(l[poly2-'A'].isEmpty()&&!intialized.contains(poly2))
 			{
 				String msg="Varaible "+poly2+" Not Set";
 				System.out.println(msg);
-				throw new RuntimeException(msg);
+				System.out.println("Insert the variable name: A, B or C");
+			    poly2=scan.next().charAt(0);
+//				throw new RuntimeException(msg);
 			}
 			//(1,23),(-100,-100)
 			//(1,2),(1-100),(-231,23)
@@ -185,11 +204,13 @@ public class Mainclass {
 			char poly=scan.next().charAt(0);
 			System.out.println("The Value");
 			int value =scan.nextInt();
-			if(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
+			while(l[poly-'A'].isEmpty()&&!intialized.contains(poly))
 			{
 				String msg="Varaible "+poly+" Not Set";
 				System.out.println(msg);
-				throw new RuntimeException(msg);
+				System.out.println("Insert the variable name: A, B or C");
+			    poly=scan.next().charAt(0);
+//				throw new RuntimeException(msg);
 			}
 			if(l[poly-'A'].isEmpty())
 			{
@@ -205,10 +226,9 @@ public class Mainclass {
 			l[poly-'A'].clear();
 		}
 		else
-		{
+		{   System.out.println("program terminated");
 			flag=false;
 		}
 		}
 }
 }
-
